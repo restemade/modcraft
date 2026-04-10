@@ -1,0 +1,137 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #e6f2e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app-root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #b8cfdb;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle, rgba(10, 20, 12, 0.45), rgba(5, 8, 6, 0.8));
+  z-index: 30;
+}
+
+.intro-card {
+  width: min(640px, 92vw);
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 243, 199, 0.35);
+  background: linear-gradient(180deg, rgba(27, 48, 34, 0.88), rgba(16, 24, 20, 0.86));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.intro-kicker {
+  color: #9bcf8c;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.intro-card h1 {
+  margin: 6px 0 12px;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.intro-card p {
+  color: #c4d8c8;
+  line-height: 1.55;
+}
+
+.intro-card button,
+.unlock-btn {
+  margin-top: 16px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #7cab68;
+  color: #152314;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hud {
+  position: fixed;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 10;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(15, 24, 20, 0.62);
+  border: 1px solid rgba(162, 194, 161, 0.35);
+}
+
+.hud-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hud-help {
+  margin-top: 8px;
+  color: #cee0ce;
+  font-size: 13px;
+}
+
+.minimap {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 210px;
+  border: 1px solid rgba(170, 221, 170, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 12;
+  transition: width 0.2s ease;
+}
+
+.minimap.expanded {
+  width: 320px;
+}
+
+.landmark {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(16, 24, 20, 0.78);
+  border: 1px solid rgba(166, 210, 153, 0.68);
+  color: #def0d5;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.unlock-btn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  margin: 0;
+  z-index: 13;
+}
+
+.loading {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(10, 16, 12, 0.84);
+  border: 1px solid rgba(190, 230, 171, 0.4);
+  font-size: 14px;
+}
