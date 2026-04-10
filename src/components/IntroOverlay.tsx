@@ -10,8 +10,8 @@ export function IntroOverlay({ onStart }: IntroOverlayProps) {
   if (!introOpen) return null;
 
   return (
-    <div className="intro-overlay" onClick={onStart}>
-      <div className="intro-card" onClick={(e) => e.stopPropagation()}>
+    <div className="intro-overlay">
+      <div className="intro-card" role="dialog" aria-modal="true">
         <p className="intro-kicker">Ecopark Concept • 3D Flight Demo</p>
         <h1>Нажмите для входа в режим полёта</h1>
         <p>

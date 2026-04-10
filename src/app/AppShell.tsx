@@ -9,10 +9,10 @@ export function AppShell() {
 
   const startExperience = () => {
     setIntroOpen(false);
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       const canvas = document.querySelector('canvas');
       canvas?.requestPointerLock();
-    });
+    }, 50);
   };
 
   return (

@@ -28,7 +28,7 @@ canvas {
   inset: 0;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle, rgba(10, 20, 12, 0.45), rgba(5, 8, 6, 0.8));
+  background: radial-gradient(circle, rgba(10, 20, 12, 0.72), rgba(5, 8, 6, 0.92));
   z-index: 30;
 }
 
